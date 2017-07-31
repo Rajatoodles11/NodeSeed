@@ -1,35 +1,66 @@
+var UserService = require('../services/UserService').UserService;
 
-var UserService = require('../services/UserService');
-
+console.log("in UserController UserServices is:", UserService);
 // Iffy function is used i.e Immedate Invoked Function
 module.exports.UserController = (function () {
 
-var registerAction = function(req,res){
-   
-   console.log("In UserController");
-//    var name = req.body.name;
-//    var email = req.body.email;
-//    var phone = req.body.phone;
-//    var password = req.body.password;
-//    var age = req.body.age;
-//    var obj ={
-//          name = req.body.name,
-//          email = req.body.email,
-//          phone = req.body.phone,
-//          password = req.body.password,
-//          age = req.body.age,
-//    }      
+    var registerAction = function (req, res) {
 
-//    console.log("Object is",obj);     
-       
-//    UserService.registerAction(obj);    
-}
+        console.log("In UserController Register Action");
+        var name = req.body.name;
+        var email = req.body.email;
+        var phone = req.body.phone;
+        var password = req.body.password;
+        var age = req.body.age;
+        console.log("Name is:-", name);
+        console.log("Email is:-", email);
+        console.log("Phone is:-", phone);
+        console.log("Password is:-", password);
+        console.log("Age  is:-", age);
+        var obj = {
+            name: name,
+            email: email,
+            phone: phone,
+            password: password,
+            age: age,
+        }
+
+        console.log("Object is", obj);
+        UserService.registerAction(obj, res);
+    }
 
 
+    var loginAction = function(req,res){
 
-return {
+        var loginDetails = {
+                 username : req.body.username,
+                 password : req.body.password, 
+        }
+        console.log("Logindetails in controller is:",loginDetails)
+       UserService.loginAction(loginDetails,res);
 
-registerAction : registerAction,
-}
+    }
+
+
+    var getAllUsers = function(req,res){
+
+         console.log("In Controller getAllUsers function");
+         UserService.getAllUsers(res);
+    }
+
+    var updateUser = function(req,res){
+
+         console.log("in updateUser func in UserController"); 
+         var userUpdateObject = req.body;
+         UserService.updateUser(userUpdateObject, res); 
+    }
+
+    return {
+
+        registerAction: registerAction,
+        loginAction : loginAction,
+        getAllUsers : getAllUsers,
+        updateUser : updateUser,
+    }
 
 })();

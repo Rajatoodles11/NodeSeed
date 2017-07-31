@@ -6,7 +6,7 @@ var Schema = mongoose.Schema;
 var UserSchema   = new Schema({
         
     name: String,
-    email: { type: mongoose.SchemaTypes.Email, required: true },
+    email: { type: mongoose.SchemaTypes.Email, required: true ,trim :true, },
     age: Number, 
     phone: Number,
     password: { type : String, required:true }, 
@@ -15,4 +15,6 @@ var UserSchema   = new Schema({
 
 });
 
-module.exports = mongoose.model('User', UserSchema);
+User = mongoose.model('User', UserSchema);
+
+module.exports = User;
