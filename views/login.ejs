@@ -36,39 +36,19 @@
                 <div class="mdl-layout-spacer"></div>
                 <div class="mdl-cell mdl-cell--4-col ">
 
-                    <form class="mui-form" method="POST"  action="http://localhost:8081/registerUser">
-                        <legend>Sign Up</legend>
+                    <form class="mui-form" method="POST"  action="http://localhost:8081/login/">
+                        <legend>Log In</legend>
                         <div class="mui-textfield mui-textfield--float-label">
-                            <input type="text" name="name">
-                            <label>Name</label>
+                            <input type="text" name="username" required>
+                            <label>User Name</label>
                         </div>
+
                         <div class="mui-textfield mui-textfield--float-label">
-                            <input type="text" value="" name="email">
-                            <label>Email</label>
-                        </div>
-                        <div class="mui-textfield mui-textfield--float-label">
-                            <input type="password" value="" name="password">
+                            <input type="password" value="" name="password" required>
                             <label>Password</label>
                         </div>
-                        <div class="mui-textfield mui-textfield--float-label">
-                            <input type="password" name="confirm-password" class="mdl-textfield__input" value="">
-                            <label>Confirm Password</label>
-                             <span class="mdl-textfield__error"> Input must be equal to password</span>
-                        </div>
-                            
-                        <div class="mui-textfield mui-textfield--float-label">
-                            <input type="text" value="" name="phoneno">
-                            <label>Phone No</label>
-                        </div>
-                        <div class="mui-textfield mui-textfield--float-label">
-                            <input type="number" value="" name="age">
-                            <label>Age</label>
-                        </div>
-                        <!--<div class="mui-textfield mui-textfield--float-label">
-                            <textarea>Value on load</textarea>
-                            <label>Textarea</label>
-                        </div>-->
-                        <button type="submit" class="mui-btn mui-btn--raised">Submit</button>
+
+                        <button type="submit" class="mui-btn mui-btn--raised  mui-btn--primary">Secure Log In</button>
                     </form>
 
                 </div>
