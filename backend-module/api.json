@@ -1,0 +1,74 @@
+{
+  "apiVersion": "1.0",
+  "apis": [
+    {
+      "description": "Admin Controller",
+      "path": "/default/admin-controller",
+      "position": 0
+    },
+    {
+      "description": "Atg Private Api Controller",
+      "path": "/default/atg-private-api-controller",
+      "position": 0
+    },
+    {
+      "description": "Atg Public Api Controller",
+      "path": "/default/atg-public-api-controller",
+      "position": 0
+    },
+    {
+      "description": "Logout Controller",
+      "path": "/default/logout-controller",
+      "position": 0
+    },
+    {
+      "description": "Mobile Controller",
+      "path": "/default/mobile-controller",
+      "position": 0
+    },
+    {
+      "description": "Profile Controller",
+      "path": "/default/profile-controller",
+      "position": 0
+    },
+    {
+      "description": "Synergy Private Api Controller",
+      "path": "/default/synergy-private-api-controller",
+      "position": 0
+    },
+    {
+      "description": "Synergy Public Api Controller",
+      "path": "/default/synergy-public-api-controller",
+      "position": 0
+    }
+  ],
+  "authorizations": {
+    "oauth2": {
+      "grantTypes": {
+        "implicit": {
+          "loginEndpoint": {
+            "url": "https://www.stopandshop.com/auth/login.jsp"
+          },
+          "tokenName": "access_token",
+          "type": "implicit"
+        }
+      },
+      "scopes": [
+        {
+          "description": "Used to proxy to Synergy and ATG",
+          "scope": "profile"
+        }
+      ],
+      "type": "oauth2"
+    }
+  },
+  "info": {
+    "contact": "XXXX",
+    "description": "XXXX",
+    "license": "XXXX",
+    "licenseUrl": "XXXX",
+    "termsOfServiceUrl": "XXXX",
+    "title": "OAuth REST API"
+  },
+  "swaggerVersion": "1.2"
+}
